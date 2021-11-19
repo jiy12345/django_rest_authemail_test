@@ -142,3 +142,16 @@ STATIC_URL = '/static/'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+import os
+
+# 이메일의 송신자 정보 설정
+EMAIL_FROM = os.environ.get('AUTHEMAIL_DEFAULT_EMAIL_FROM')
+EMAIL_BCC = os.environ.get('AUTHEMAIL_DEFAULT_EMAIL_BCC')
+
+EMAIL_HOST = os.environ.get('AUTHEMAIL_EMAIL_HOST')
+EMAIL_PORT = os.environ.get('AUTHEMAIL_EMAIL_PORT')
+EMAIL_HOST_USER = os.environ.get('AUTHEMAIL_EMAIL_HOST_USER') 
+EMAIL_HOST_PASSWORD = os.environ.get('AUTHEMAIL_EMAIL_HOST_PASSWORD')
+EMAIL_USE_TLS = True
+EMAIL_USE_SSL = False
