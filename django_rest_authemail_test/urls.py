@@ -20,5 +20,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
 
     # authemail 사용을 위한 url 작성
-    path('api/accounts/', include('authemail.urls')),
+    path('', include('authemail.urls')),
 ]
